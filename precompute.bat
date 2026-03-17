@@ -1,0 +1,1 @@
+build\Release\AtmosphereBake.exe --config config.json --out "C:\Users\sy415\workspace\AtmosphereBake\out\am0_v2"

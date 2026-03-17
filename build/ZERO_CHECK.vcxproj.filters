@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\sy415\workspace\AtmosphereBake\build\CMakeFiles\3021d4d65838fede09f91f343fadcd9d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{56C38122-109B-35B2-B82F-E93EFCFF8C3C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

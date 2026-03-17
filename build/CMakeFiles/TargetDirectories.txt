@@ -1,0 +1,12 @@
+C:/Users/sy415/workspace/AtmosphereBake/build/CMakeFiles/AtmoBakeCore.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/CMakeFiles/AtmoPreviewCore.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/CMakeFiles/AtmosphereBake.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/CMakeFiles/AtmosphereBakePreview.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/CMakeFiles/INSTALL.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/ext/json/CMakeFiles/INSTALL.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/ext/json/CMakeFiles/ALL_BUILD.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/ext/fpng/CMakeFiles/fpng_test.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/ext/fpng/CMakeFiles/INSTALL.dir
+C:/Users/sy415/workspace/AtmosphereBake/build/ext/fpng/CMakeFiles/ALL_BUILD.dir

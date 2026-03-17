@@ -1,0 +1,10 @@
+^C:\USERS\SY415\WORKSPACE\ATMOSPHEREBAKE\BUILD\CMAKEFILES\3021D4D65838FEDE09F91F343FADCD9D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sy415/workspace/AtmosphereBake -BC:/Users/sy415/workspace/AtmosphereBake/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/sy415/workspace/AtmosphereBake/build/AtmosphereBake.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,77 @@
+{
+  "planet": {
+    "bottom_radius_m": 6360000.0,
+    "top_radius_m": 6460000.0,
+    "observer_altitude_m": 500,
+    "mu_s_min": -0.2
+  },
+
+  "wavelength": {
+    "mode": "uniform_step",
+    "min_nm": 360.0,
+    "max_nm": 830.0,
+    "step_nm": 5.0
+  },
+
+  "solar_irradiance": {
+    "mode": "file_csv",
+    "path": "C:/Users/sy415/workspace/AtmosphereBake/data/PVL_Spectrum.csv",
+    "lambda_column": "Wavelength (nm)",
+    "value_column": "Spectral irradiance (W m-2 nm-1)"
+  },
+
+  "rayleigh": {
+    "density": {
+      "type": "exp",
+      "scale_height_m": 8000.0
+    },
+    "scattering": {
+      "mode": "builtin"
+    }
+  },
+
+  "mie": {
+    "density": {
+      "type": "exp",
+      "scale_height_m": 1200.0
+    },
+    "phase_function": {
+      "type": "cornette_shanks",
+      "g": 0.8
+    },
+    "coefficients": {
+      "mode": "builtin"
+    }
+  },
+
+  "absorption": {
+    "enabled": true,
+    "density": {
+      "type": "builtin_ozone"
+    },
+    "extinction": {
+      "mode": "builtin"
+    }
+  },
+
+  "lut": {
+    "n_mu": 64,
+    "n_mu_s": 64,
+    "n_nu": 128,
+
+    "transmittance_r": 256,
+    "transmittance_mu": 128,
+
+    "irradiance_r": 64,
+    "irradiance_mu_s": 16,
+
+    "integration_steps_transmittance": 128,
+    "integration_steps_view": 128,
+    "integration_steps_sun": 64
+  },
+
+  "multiple_scattering": {
+    "enabled": true,
+    "scattering_orders": 4
+  }
+}
