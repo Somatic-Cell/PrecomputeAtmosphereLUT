@@ -109,7 +109,7 @@ __global__ void kernelBuildSkySingleScatter(
   const float nu  = decodeNuFromUnit(uNu);                // 視線方向と太陽方向がなす角の余弦 [-1, 1] 
   
   const float rObserver = atm.bottomRadius_m + atm.observerAltitude_m;  // 観測者がいる位置
-  const std::size_t outIdx = skyIndex(iMu, iMuS, iNu, iLambda, dims); 
+  const std::size_t outIdx = skyIndex(iNu, iMu, iMuS, iLambda, dims); 
   
   // 視線が地面と交差するかどうかの判定
   const bool viewHitsGround = atmo::rayIntersectsGround(atm.bottomRadius_m, rObserver, mu); 

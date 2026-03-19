@@ -92,13 +92,13 @@ float lerp(float a, float b, float t)
 }
 
 std::size_t skyIndex(const PreviewMetadata& meta,
+                     std::uint32_t iNu,
                      std::uint32_t iMu,
                      std::uint32_t iMuS,
-                     std::uint32_t iNu,
                      std::uint32_t iLambda)
 {
     const std::size_t lambdaCount = meta.wavelengthsNm.size();
-    return ((((static_cast<std::size_t>(iMu) * meta.skyMuS + iMuS) * meta.skyNu + iNu) * lambdaCount) + iLambda);
+    return ((((static_cast<std::size_t>(iNu) * meta.skyMu + iMu) * meta.skyMuS + iMuS) * lambdaCount) + iLambda);
 }
 
 float phaseRayleigh(float nu)
@@ -126,9 +126,9 @@ float sampleSky4D(const std::vector<float>& data,
     const float muST = clamp01((muS - meta.muSMin) / std::max(1.0e-6f, 1.0f - meta.muSMin));
     const float nuT = clamp01(0.5f * (nu + 1.0f));
 
-    const float x = muT * static_cast<float>(meta.skyMu - 1);
-    const float y = muST * static_cast<float>(meta.skyMuS - 1);
-    const float z = nuT * static_cast<float>(meta.skyNu - 1);
+    const float x = nuT  * static_cast<float>(meta.skyNu  - 1);
+    const float y = muT  * static_cast<float>(meta.skyMu  - 1);
+    const float z = muST * static_cast<float>(meta.skyMuS - 1);
 
     const std::uint32_t x0 = static_cast<std::uint32_t>(std::floor(x));
     const std::uint32_t x1 = std::min(x0 + 1, meta.skyMu - 1);

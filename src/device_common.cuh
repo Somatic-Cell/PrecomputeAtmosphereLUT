@@ -142,14 +142,14 @@ ATMO_HD inline std::size_t irradianceIndex(
 
 // 4D 情報が 1D 空間上に保持
 ATMO_HD inline std::size_t skyIndex(
+  int iNu,
   int iMu,
   int iMuS,
-  int iNu,
   int iLambda,
   const DeviceLutDims& dims
 ){
   return static_cast<std::size_t>(
-    ((((iMu * dims.skyMuS) + iMuS) * dims.skyNu) + iNu) *
+    ((((iNu * dims.skyMu) + iMu) * dims.skyMuS) + iMuS) *
     dims.wavelengthCount + iLambda
   );
 }

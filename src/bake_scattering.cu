@@ -662,7 +662,7 @@ __global__ void kernelProjectScatteringToObserverSky(
         muS,
         nu);
 
-    const std::size_t outIdx = skyIndex(iMu, iMuS, iNu, iLambda, dims);
+    const std::size_t outIdx = skyIndex(iNu, iMu, iMuS, iLambda, dims);
     outSkyAccum[outIdx] += value;
 }
 
