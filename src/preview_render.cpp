@@ -131,11 +131,11 @@ float sampleSky4D(const std::vector<float>& data,
     const float z = muST * static_cast<float>(meta.skyMuS - 1);
 
     const std::uint32_t x0 = static_cast<std::uint32_t>(std::floor(x));
-    const std::uint32_t x1 = std::min(x0 + 1, meta.skyMu - 1);
+    const std::uint32_t x1 = std::min(x0 + 1, meta.skyNu - 1);
     const std::uint32_t y0 = static_cast<std::uint32_t>(std::floor(y));
-    const std::uint32_t y1 = std::min(y0 + 1, meta.skyMuS - 1);
+    const std::uint32_t y1 = std::min(y0 + 1, meta.skyMu - 1);
     const std::uint32_t z0 = static_cast<std::uint32_t>(std::floor(z));
-    const std::uint32_t z1 = std::min(z0 + 1, meta.skyNu - 1);
+    const std::uint32_t z1 = std::min(z0 + 1, meta.skyMuS - 1);
 
     const float fx = x - static_cast<float>(x0);
     const float fy = y - static_cast<float>(y0);
